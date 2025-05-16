@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Manrope";
+  src: url(https://fonts.google.com/specimen/Manrope);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  font-size: 13px;
+  color: hsl(217, 19%, 35%);
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  display: flex;
+  border-radius: 15px;
+  background-color: white;
+}
+#drawers {
+  width: 35%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.description {
+  position: relative;
+  padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2em;
+}
+.description > p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+#avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 2em;
+  flex-basis: 10%;
+}
+.details {
+  flex-basis: 70%;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.share {
+  flex-basis: 20%;
+}
+#share-btn {
+  background-color: hsl(210, 46%, 95%);
+  color: white;
+  border: none;
+  padding: 1em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#share-btn:hover {
+  color: hsl(210, 46%, 85%);
+  background-color: hsl(217, 19%, 35%);
+}
+.hidden {
+  display: none;
+}
+.active {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  position: absolute;
+  right: -45px;
+  bottom: 100px;
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(212, 23%, 69%);
+  padding: 1.5em 4em;
+  letter-spacing: 2px;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 375px) {
+    .card {
+        width: 90%;
+        flex-direction: column;
+    }
+    #drawers {
+        width: 100%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        padding-top: 3em;
+        padding-bottom: 1em;
+    }
+    .description > h1 {
+        font-size: 21px;
+    }
+    .details {
+        font-size: 14px;
+    }
+    .active {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        justify-content: center;
+    }
+}
